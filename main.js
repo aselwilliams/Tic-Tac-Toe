@@ -6,10 +6,11 @@
 const cells = document.querySelectorAll('.cell');
 const result = document.querySelector('.result');
 const gameOver = document.querySelector('.game-over');
-const resetBtn = document.querySelector('.reset')
+const resetBtn = document.querySelector('.reset');
+const turn = document.querySelector('.turn');
 
 let player1 = true;
-let count=0;
+let count = 0;
 
 function startGame(){
     cells.forEach(cell=>{
@@ -45,13 +46,24 @@ function executeGame(){
         
         ){
             gameOver.style.display='flex';
-            result.innerText = player1 ? 'Player X Won' : 'Player O Won';
-        return;
+            result.innerText = player1 ? 'Player X won!' : 'Player O won!';
+            turn.innerText='';
+            return;
     }
     if(count===9){
-        console.log('tie')
+        gameOver.style.display='flex';
+        result.innerText = "It's a tie!";
+        turn.innerText='';
+        return;
     }
     player1 = !player1 
+    if(player1===true){
+        turn.innerText = 'Player X turn';
+        cells.style.color='coral';
+    } else {
+        turn.innerText = 'Player O turn';
+        cells.style.color='yellowgreen';
+    }
 }
 
 resetBtn.addEventListener('click', resetGame)
@@ -62,4 +74,5 @@ function resetGame(){
     startGame()
     player1=true;
     count=0;
+    turn.innerText=''
 }

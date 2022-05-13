@@ -29,8 +29,8 @@ h1{
     border: 2px solid aliceblue;
     font-size: 90px;
     text-align: center;
-    color: aliceblue;
-
+    color: coral;
+    cursor: pointer;
 }
 .game-over{
     width: 60vw;
@@ -45,6 +45,8 @@ h1{
     align-items: center;
     flex-direction: column;
     display: none;
+    color: darkblue;
+    text-transform: uppercase;
 }
 .reset{
     border: none;
@@ -54,7 +56,13 @@ h1{
     color:aliceblue;
     background: darkblue;
     transition: 0.3s all ease;
+    cursor: pointer;
 }
 .reset:hover{
     font-size: 20px;
+}
+.turn{
+    text-align: center;
+    color: coral;
+    margin-top: 20px;
 }
