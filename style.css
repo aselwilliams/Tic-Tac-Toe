@@ -1,5 +1,4 @@
 *{
-    margin:0;
     padding:0;
     box-sizing: border-box;
     font-family: sans-serif;
@@ -32,4 +31,29 @@ h1{
     text-align: center;
     color: aliceblue;
 
+}
+.game-over{
+    width: 60vw;
+    height: 80vh;
+    background-color: rgba(255, 255,255,0.5);
+    position: fixed;
+    top:100px;
+    border-radius: 15px;
+    backdrop-filter: blur(0.1rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.reset{
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    color:aliceblue;
+    background: darkblue;
+    transition: 0.3s all ease;
+}
+.reset:hover{
+    font-size: 20px;
 }
