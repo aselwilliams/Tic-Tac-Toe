@@ -3,27 +3,32 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
-h1{
+
+h1 {
     text-align: center;
     color: aliceblue;
     padding-top: 20px;
 }
-.main-wrapper{
+
+.main-wrapper {
     width: 100%;
     height: 100vh;
     background-color: #09424C;
 }
-.container{
+
+.container {
     display: flex;
     justify-content: center;
     align-items:center;
 }
-.board{
+
+.board {
     display: grid;
     grid-template-columns: repeat(3,auto);
     margin-top: 150px;
 }
-.cell{
+
+.cell {
     height:100px;
     width: 100px;
     border: 2px solid aliceblue;
@@ -32,7 +37,8 @@ h1{
     color: coral;
     cursor: pointer;
 }
-.game-over{
+
+.game-over {
     width: 60vw;
     height: 80vh;
     background-color: rgba(255, 255,255,0.5);
@@ -48,7 +54,8 @@ h1{
     color: darkblue;
     text-transform: uppercase;
 }
-.reset{
+
+.reset {
     border: none;
     padding: 10px 20px;
     font-size: 18px;
@@ -58,10 +65,12 @@ h1{
     transition: 0.3s all ease;
     cursor: pointer;
 }
-.reset:hover{
+
+.reset:hover {
     font-size: 20px;
 }
-.turn{
+
+.turn {
     text-align: center;
     color: coral;
     margin-top: 20px;

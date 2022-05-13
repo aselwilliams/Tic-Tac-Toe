@@ -21,6 +21,7 @@ startGame()
 
 function executeGame(){
     this.innerText = player1 ? 'X' : 'O';
+    this.style.color = player1 ? "coral" : "yellowgreen";
     
     count++; 
 
@@ -57,22 +58,20 @@ function executeGame(){
         return;
     }
     player1 = !player1 
-    if(player1===true){
+    if (player1===true){
         turn.innerText = 'Player X turn';
-        cells.style.color='coral';
     } else {
         turn.innerText = 'Player O turn';
-        cells.style.color='yellowgreen';
     }
 }
 
-resetBtn.addEventListener('click', resetGame)
+resetBtn.addEventListener('click', resetGame);
 
-function resetGame(){
+function resetGame() {
     gameOver.style.display='none';
     cells.forEach(cell=>cell.innerText='')
     startGame()
-    player1=true;
-    count=0;
-    turn.innerText=''
+    player1 = true;
+    count = 0;
+    turn.innerText = ''
 }
