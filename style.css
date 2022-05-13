@@ -4,9 +4,10 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
-header h1{
+h1{
     text-align: center;
     color: aliceblue;
+    padding-top: 20px;
 }
 .main-wrapper{
     width: 100%;
@@ -26,7 +27,7 @@ header h1{
 .cell{
     height:100px;
     width: 100px;
-    border: 2px solid white;
+    border: 2px solid aliceblue;
     font-size: 90px;
     text-align: center;
     color: aliceblue;
