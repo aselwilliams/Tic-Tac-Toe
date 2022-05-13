@@ -5,6 +5,7 @@
 const cells = document.querySelectorAll('.cell');
 
 let player1 = true;
+let count=0;
 
 function startGame(){
     cells.forEach(cell=>{
@@ -15,7 +16,8 @@ startGame()
 
 function executeGame(){
     this.innerText = player1 ? 'X' : 'O';
-    player1 = !player1  
+    player1 = !player1 
+    count++; 
 
     let val1 = cells[0].innerText;
     let val2 = cells[1].innerText;
@@ -40,6 +42,9 @@ function executeGame(){
 
 
         ){
-        console.log('win')
+        return;
+    }
+    if(count===9){
+        console.log('tie')
     }
 }
